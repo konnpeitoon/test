@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<h1>デジタルポストイット</h1>
+<div id="blog-post-demo">
+    <div class="post">
+    <blog-post
+      v-for="post in posts"
+      v-bind:key="post.id"
+      v-bind:title="post.title"
+    ></blog-post>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js">
+</script>
+<script>
+Vue.component('blog-post', {
+  props: ['title'],
+  template: '<div class="article">{{ id }} {{ title }} <div class="del">-</div></div>'
+})
+new Vue({
+  el: '#blog-post-demo',
+  data: {
+    posts: [
+      { id: 1, title: 'My journey with Vue' },
+      { id: 2, title: 'Blogging with Vue' },
+      { id: 3, title: 'Why Vue is so fun' }
+    ]
+  }
+})
+</script>
+<style scoped>
+.h1{
+  border-bottom-color: rgb(221,221,221);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.post{
+  display: flex;
+}
+.article {
+  display: block;
+  width: 20vw;
+  height:10vh;
+  background-color: blue;
+  color: white;
+  margin: 1vh 1vh;
+  position:relative;
+}
+.article:hover{
+
+}
+.del{
+  width: 3vw;
+  height: 3vh;
+  position:absolute;
+  top:-1vh;
+  left:18vw;
+  font-size: 2vh;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+  background-color:red;
+  transition-duration:0.1s;
+}
+.del:hover {
+  width:3.3vw;
+  height:3.3vh;
+}
+</style>
+</body>
+</html>
