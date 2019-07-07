@@ -1,0 +1,52 @@
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  height: 150px;
+}
+h1{
+  display:block;
+}
+nav{
+  display:block; 
+}
+ul{
+  display:block; 
+  text-align: center; 
+  padding-inline-start: 0px;
+}
+li{
+  display:inline-block; 
+  margin: 0 10px; 
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center; 
+  border-radius: 10px;
+}
+a	{
+  font-size: 15px;
+  color:rgb(114, 110, 114);
+  text-decoration:none;
+  padding: 15px;
+  border: solid 1px rgb(114, 110, 114);
+}
+.newcontents{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.newcontents_aria{
+  width: 45%;
+  height: 700px;
+}
+
+.radioList{
+  width: 90%;
+  height: 100px;
+  background-color: white; 
+  border:solid 1px black ;
+  border-radius: 2px;
+}
